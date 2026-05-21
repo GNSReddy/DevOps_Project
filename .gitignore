@@ -1,0 +1,17 @@
+node_modules/
+
+.env
+
+dist/
+
+build/
+
+*.log
+
+backend/database/tasks.db
+
+frontend/dist/
+
+.vscode/
+
+coverage/
