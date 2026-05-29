@@ -83,7 +83,10 @@ pipeline {
         stage('Deploy Application') {
     steps {
         sh '''
-        docker-compose down || true
+        docker rm -f frontend-container || true
+        docker rm -f backend-container || true
+        docker rm -f auth-container || true
+
         docker-compose up -d
         '''
     }

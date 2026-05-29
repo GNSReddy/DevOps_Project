@@ -1,68 +1,45 @@
 services:
 
   frontend:
-
-    build: ./frontend
-
+    image: gnsr/frontend-image:v1
     container_name: frontend-container
-
     ports:
       - "3000:3000"
-
     depends_on:
       - backend
       - auth
-
     networks:
       - smart-network
 
   backend:
-
-    build: ./backend
-
+    image: gnsr/backend-image:v1
     container_name: backend-container
-
     ports:
       - "5000:5000"
-
     networks:
       - smart-network
-
     volumes:
       - sqlite-data:/shared-db
-
     environment:
       DATABASE_PATH: /shared-db/tasks.db
 
   auth:
-
-    build: ./auth-service
-
+    image: gnsr/auth-image:v1
     container_name: auth-container
-
     ports:
       - "5001:5001"
-
     environment:
       DATABASE_PATH: /shared-db/tasks.db
-
     depends_on:
       - backend
-
     volumes:
       - sqlite-data:/shared-db
-
     networks:
       - smart-network
 
-
 volumes:
-
   sqlite-data:
 
-
 networks:
-
   smart-network:
-
     driver: bridge
