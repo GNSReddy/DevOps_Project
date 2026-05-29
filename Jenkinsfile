@@ -81,11 +81,13 @@ pipeline {
         }
 
         stage('Deploy Application') {
-            steps {
-                bat 'docker compose down'
-                bat 'docker compose up -d'
-            }
-        }
+    steps {
+        sh '''
+        docker compose down || true
+        docker compose up -d
+        '''
+    }
+}
     }
 
     post {
