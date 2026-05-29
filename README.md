@@ -44,6 +44,7 @@ A clean, responsive full-stack website containing a React frontend dashboard and
 
 ### Step 3: Start the Frontend React Web App
 1. Open another terminal window.
+
 2. Navigate to the `frontend` folder:
    ```bash
    cd frontend
@@ -56,4 +57,4 @@ A clean, responsive full-stack website containing a React frontend dashboard and
    ```bash
    npm run dev
    ```
-5. Open your browser to **`http://localhost:3000`** to view and use the website!
+5. Open your browser to **`http://localhost:3000`** to view and use the website !
