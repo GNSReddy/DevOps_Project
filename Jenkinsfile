@@ -11,10 +11,11 @@ pipeline {
     stages {
 
         stage('Checkout Code') {
-            steps {
-                git 'https://github.com/GNSReddy/DevOps_Project.git'
-            }
-        }
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/GNSReddy/DevOps_Project.git'
+    }
+}
 
         stage('Build Frontend Image') {
             steps {
