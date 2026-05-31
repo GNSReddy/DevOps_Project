@@ -39,7 +39,7 @@ export default function Login({ onAuthSuccess }) {
             <CheckSquare size={32} style={{ color: 'var(--accent-cyan)' }} />
             <span>SmartTask</span>
           </div>
-          <p className="auth-subtitle">Sign in to manage your tasks efficiently</p>
+          <p className="auth-subtitle">Sign in to manage your tasks efficiently ...</p>
         </div>
 
         {error && (
